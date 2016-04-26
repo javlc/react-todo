@@ -1,60 +1,44 @@
 
-# React starter kit
+# JAVLC React TODO app exercise
 
-A quick starter repo for React projects.
-
+React project that uses:
 - React
 - Babel
 - Webpack
 - Jasmine + Karma + PhantomJS
 
 ## Install
-
 ```
 npm install
 ```
 
 ## Build
-
 ```
 webpack
 ```
 
 ## Test
-
 ```
 npm test
 ```
 
 ## Preview
-
 While developing, you'll likely want to preview your changes locally.
-
 ```
 webpack --watch
 python -m SimpleHTTPServer
 open http://localhost:8000
 ```
 
-## Deploy
-
-You can deploy with `surge.sh`, or with your favorite method of deploying static sites.
-
-```
-npm install -g surge
-surge
-```
-
 ## Project structure
-
 ```
 ├── LICENSE
 ├── README.md
 ├── app.js
 ├── components
-│   ├── Hello.js
+│   ├── Comp1.js
 │   └── tests
-│       └── hello-test.js
+│       └── comp1-test.js
 ├── index.html
 ├── karma.conf.js
 ├── package.json
@@ -77,3 +61,6 @@ The actual app:
 - `app.js` is the JavaScript entry point; it renders the `<Hello>` React component into the page
 - `Hello.js` contains the `<Hello>` React component
 - `hello-test.js` contains a simple test
+
+_Starter project adapted from from bonniee/react-starter_
+_Todo App followed from: https://youtu.be/IR6smI_YJDE_
