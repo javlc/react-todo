@@ -63,4 +63,5 @@ The actual app:
 - `hello-test.js` contains a simple test
 
 _Starter project adapted from from bonniee/react-starter_
+
 _Todo App followed from: https://youtu.be/IR6smI_YJDE_
