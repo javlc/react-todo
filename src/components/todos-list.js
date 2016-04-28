@@ -5,7 +5,8 @@ import TodosListItem from './todos-list-item';
 
 class TodosList extends React.Component {
   renderItems() {
-    return _.map(this.props.todos, (todo, index) => <TodosListItem key={index} {...todo} />);
+    const props = _.omit(this.props, 'todos');
+    return _.map(this.props.todos, (todo, index) => <TodosListItem key={index} {...todo} {...props} />);
   }
 
   render() {
@@ -13,7 +14,7 @@ class TodosList extends React.Component {
         <table>
             <TodosListHeader />
             <tbody>
-                {this.renderItems()};
+                {this.renderItems()}
             </tbody>
         </table>
     );

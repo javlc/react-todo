@@ -1,5 +1,6 @@
 import React from 'react';
 import { todos } from './todos';
+import CreateTodo from './create-todo';
 import TodosList from './todos-list';
 
 class TodoApp extends React.Component {
@@ -15,9 +16,36 @@ class TodoApp extends React.Component {
     return (
         <div>
             <h1>JAVLC React ToDo App</h1>
-            <TodosList todos={this.state.todos}/>
+            <CreateTodo 
+                createTask={this.createTask.bind(this)}
+            />
+            <TodosList 
+                todos={this.state.todos}
+                toggleTask={this.toggleTask.bind(this)}
+                saveTask={this.saveTask.bind(this)}
+            />
         </div>
     );
+  }
+
+  toggleTask(task) {
+    const foundTodo = _.find(this.state.todos, todo => todo.task === task);
+    foundTodo.isCompleted = !foundTodo.isCompleted;
+    this.setState({ todos: this.state.todos });
+  }
+
+  createTask(task) {
+    this.state.todos.push({
+        task,
+        isCompleted:false
+    });
+    this.setState({ todos: this.state.todos });
+  }
+
+  saveTask(oldTask, newTask) {
+    const foundTodo = _.find(this.state.todos, todo => todo.task === oldTask);
+    foundTodo.task = newTask;
+    this.setState({ todos: this.state.todos });
   }
 }
 export default TodoApp;

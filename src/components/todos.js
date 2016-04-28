@@ -7,4 +7,4 @@ export const todos = [
         task: 'Eat dinner',
         isCompleted: true
     }
-];
+]
