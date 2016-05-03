@@ -17,6 +17,7 @@ class TodoApp extends React.Component {
         <div>
             <h1>JAVLC React ToDo App</h1>
             <CreateTodo 
+                todos = {this.state.todos} 
                 createTask={this.createTask.bind(this)}
             />
             <TodosList 
