@@ -11,7 +11,7 @@ class TodosList extends React.Component {
 
   render() {
     return (
-        <table>
+        <table className="comp-tareas">
             <TodosListHeader />
             <tbody>
                 {this.renderItems()}

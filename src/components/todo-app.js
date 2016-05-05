@@ -14,8 +14,8 @@ class TodoApp extends React.Component {
 
   render() {
     return (
-        <div>
-            <h1>JAVLC React ToDo App</h1>
+        <div id="javlc-render-container">
+            <h1 className="titulo">Registro de Tareas</h1>            
             <CreateTodo 
                 todos = {this.state.todos} 
                 createTask={this.createTask.bind(this)}
@@ -26,6 +26,7 @@ class TodoApp extends React.Component {
                 saveTask={this.saveTask.bind(this)}
                 deleteTask={this.deleteTask.bind(this)}
             />
+            <p>React.js - por javlc sobre yt: IR6smI_YJDE</p>
         </div>
     );
   }
